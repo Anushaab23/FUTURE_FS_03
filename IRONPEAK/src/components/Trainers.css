@@ -1,0 +1,136 @@
+.trainers {
+    background: transparent;
+    position: relative;
+}
+
+.trainers__header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.trainers__header .section-subtitle {
+    margin: 0 auto;
+}
+
+.trainers__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    position: relative;
+}
+
+.trainer-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.trainer-card:hover {
+    border-color: var(--color);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--color, transparent);
+}
+
+.trainer-card__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px 20px 20px;
+    position: relative;
+}
+
+.trainer-photo-wrap {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.trainer-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.trainer-exp-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 100px;
+    border: 1.5px solid;
+    letter-spacing: 0.04em;
+}
+
+.trainer-card__body {
+    padding: 0 22px 24px;
+}
+
+.trainer-name {
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 4px;
+}
+
+.trainer-role {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin-bottom: 14px;
+}
+
+.trainer-bio {
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    line-height: 1.65;
+    margin-bottom: 16px;
+}
+
+.trainer-specialty {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+}
+
+.specialty-label {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.trainer-certs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.cert-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+}
+
+@media (max-width: 1100px) {
+    .trainers__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 580px) {
+    .trainers__grid {
+        grid-template-columns: 1fr;
+    }
+}

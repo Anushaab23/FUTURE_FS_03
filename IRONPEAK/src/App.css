@@ -1,0 +1,5 @@
+/* App-level layout — keep minimal */
+.app {
+  position: relative;
+  overflow-x: hidden;
+}
